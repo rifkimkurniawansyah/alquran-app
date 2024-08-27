@@ -7,7 +7,7 @@ function Quran() {
   const [showTafsir, setShowTafsir] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/${ayahId}`)
+    fetch(`https://json-server-alquran-app.vercel.app/api/${ayahId}`)
       .then(response => response.json())
       .then(data => setAyah(data))
       .catch(error => console.error('Error fetching data:', error));
